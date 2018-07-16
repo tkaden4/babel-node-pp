@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { spawn } from "cross-spawn";
 import { resolve } from "path";
 import fs, { access } from "fs";
