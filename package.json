@@ -1,0 +1,29 @@
+{
+  "name": "babel-node-pp",
+  "version": "0.1.0",
+  "description": "A version of babel-node that uses the local .babelrc",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src/index.js --out-dir ./build/",
+    "start": "npm run build && node ./build/src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkaden4/babel-node-pp.git"
+  },
+  "author": "Kaden Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tkaden4/babel-node%2B%2B/issues"
+  },
+  "homepage": "https://github.com/tkaden4/babel-node%2B%2B#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5",
+    "minimist": "^1.2.0"
+  }
+}
