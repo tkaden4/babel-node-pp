@@ -11,10 +11,12 @@ const args = minimist(process.argv.slice(2));
 // TODO handle paths
 const bnode_exe = "node_modules/.bin/babel-node";
 
-fs.accessSync('.babelrc', fs.constants.F_OK | fs.constants.R_OK, err => {
+try {
+    fs.accessSync('.babelrc', fs.constants.F_OK | fs.constants.R_OK);
+} catch (e) {
     console.error("unable to access .babelrc");
-    process.exit(1)
-});
+    process.exit(1);
+}
 
 let babelrc_data = JSON.parse(fs.readFileSync('.babelrc'));
 
