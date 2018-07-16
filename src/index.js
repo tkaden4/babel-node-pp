@@ -11,8 +11,12 @@ const args = minimist(process.argv.slice(2));
 // TODO handle paths
 const bnode_exe = "node_modules/.bin/babel-node";
 
-// TODO handle read errors
-const babelrc_data = JSON.parse(fs.readFileSync('.babelrc'));
+fs.accessSync('.babelrc', fs.constants.F_OK | fs.constants.R_OK, err => {
+    console.error("unable to access .babelrc");
+    process.exit(1)
+});
+
+let babelrc_data = JSON.parse(fs.readFileSync('.babelrc'));
 
 // "foo,bar" -> "baz" = "foo,bar,baz"
 const mergeArgumentLists = (_given, extra) => {
