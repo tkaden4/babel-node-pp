@@ -1,6 +1,6 @@
 {
   "name": "babel-node-pp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A version of babel-node that uses the local .babelrc",
   "main": "build/src/index.js",
   "scripts": {
