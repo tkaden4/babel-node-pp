@@ -1,5 +1,5 @@
 # babel-node-pp
-An upgraded version of babel-node that uses .babelrc instead of needing arguments passed via arguments.
+An upgraded version of babel-node that uses `.babelrc`.
 
 By default, `babel-node-pp` uses the `babel-node` exe local to the project (e.g in `/node_modules`). This may be subject to change as I work on the project.
 
