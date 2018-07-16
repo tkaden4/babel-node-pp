@@ -1,5 +1,5 @@
 # babel-node-pp
-![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)
+[![npm version](https://badge.fury.io/js/babel-node-pp.svg)](https://badge.fury.io/js/babel-node-pp)
 
 An upgraded version of babel-node that uses `.babelrc`.
 
